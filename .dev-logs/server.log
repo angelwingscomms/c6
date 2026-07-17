@@ -1,0 +1,28 @@
+
+> c6@0.0.1 dev /home/ed/i/c6
+> vite dev
+
+Port 5173 is in use, trying another one...
+
+  VITE v8.1.5  ready in 1827 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+Using secrets defined in .env
+Using secrets defined in .env
+*** Fatal uncaught kj::Exception: workerd/util/sqlite.c++:1671: failed: SENTRY_DO SQLite failed; NOSENTRY database is locked: SQLITE_BUSY
+stack: /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@33b9d48 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20109b9 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206e2bc /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206dc76 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202b09c /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202aaf2 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fe0a32 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20680bf /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206b415 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fb1339 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432855 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432d78 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543082e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543062e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98d17 /usr/lib/libc.so.6@2abfb /usr/lib/libc.so.6@2acb4 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98024
+
+[1;31m[404] GET /favicon.ico[0m
+
+[1;31m[500] GET /login/google[0m
+Error: Secret "GOOGLE_ID" not found
+    at get_secret (src/lib/server/qdrant.ts:7:54)
+    at google_client (src/lib/server/oauth.ts:7:19)
+    at GET (src/routes/login/google/+server.ts:9:21)
+10:27:34 PM [vite] vite.config.ts changed, restarting server...
+10:27:34 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:3600/
+  ➜  Network: use --host to expose

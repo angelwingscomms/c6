@@ -30,7 +30,7 @@
 			<span class="eyebrow">Welcome</span>
 			<h2 class="display h2">Sign in to c6</h2>
 			<p class="sub">Continue with your Google account to open your sites.</p>
-			<a class="btn g" href="/login/google" data-sveltekit-reload>
+			<a class="btn g" href="/google" data-sveltekit-reload>
 				<Icon name="google" size={18} />Continue with Google
 			</a>
 			<p class="terms">By continuing you agree to keep your crew's site data tidy.</p>
