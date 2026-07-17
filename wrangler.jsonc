@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "c6",
+	"compatibility_date": "2026-07-17",
+	"compatibility_flags": ["nodejs_compat_v2"],
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"r2_buckets": [{ "binding": "R2", "bucket_name": "c6-files" }],
+	"secrets_store_secrets": [
+		{ "binding": "QDRANT_URL", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "QDRANT_URL" },
+		{ "binding": "QDRANT_KEY", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "QDRANT_KEY" },
+		{ "binding": "OPENROUTER_KEY", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "OPENROUTER_KEY" },
+		{ "binding": "SECRET", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "SECRET" },
+		{ "binding": "GOOGLE_ID", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "GOOGLE_ID" },
+		{ "binding": "GOOGLE_SECRET", "store_id": "45748cb1c67946df943075fa14cb8815", "secret_name": "GOOGLE_SECRET" }
+	],
+	"workers_dev": true,
+	"preview_urls": true,
+	"observability": { "enabled": true, "head_sampling_rate": 1 }
+}
