@@ -313,18 +313,32 @@ label.lbl {
 @keyframes fade-up {
 	from {
 		opacity: 0;
-		transform: translateY(16px);
+		transform: translateY(22px) scale(0.985);
 	}
 	to {
 		opacity: 1;
 		transform: none;
 	}
 }
+@keyframes float-breathe {
+	0%,
+	100% {
+		transform: translateY(calc(var(--float-amp, 8px) * -1));
+	}
+	50% {
+		transform: translateY(var(--float-amp, 8px));
+	}
+}
 .reveal {
 	opacity: 0;
+	will-change: opacity, transform;
 }
 .reveal.in {
-	animation: fade-up 0.8s var(--ease-out) forwards;
+	animation: fade-up 1.05s var(--ease-out) forwards;
+}
+.float {
+	animation: float-breathe var(--float-dur, 7s) ease-in-out infinite;
+	will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -335,5 +349,8 @@ label.lbl {
 	}
 	.reveal {
 		opacity: 1;
+	}
+	.float {
+		animation: none;
 	}
 }

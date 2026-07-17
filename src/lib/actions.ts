@@ -16,6 +16,39 @@ export function reveal(node: HTMLElement, delay = 0) {
 	return { destroy: () => io.disconnect() };
 }
 
+// gentle scroll-linked parallax — element drifts by `speed` * scroll distance
+export function parallax(node: HTMLElement, speed = 0.06) {
+	let raf = 0;
+	const tick = () => {
+		raf = 0;
+		const r = node.getBoundingClientRect();
+		const vh = window.innerHeight || 1;
+		const offset = (r.top + r.height / 2 - vh / 2) * -speed;
+		node.style.setProperty('--py', `${offset.toFixed(2)}px`);
+	};
+	const on_scroll = () => {
+		if (!raf) raf = requestAnimationFrame(tick);
+	};
+	tick();
+	window.addEventListener('scroll', on_scroll, { passive: true });
+	window.addEventListener('resize', on_scroll);
+	return {
+		destroy() {
+			window.removeEventListener('scroll', on_scroll);
+			window.removeEventListener('resize', on_scroll);
+			if (raf) cancelAnimationFrame(raf);
+		}
+	};
+}
+
+// soft idle float — breathing motion for hero visuals
+export function float(node: HTMLElement, { amp = 10, dur = 7 }: { amp?: number; dur?: number } = {}) {
+	node.style.setProperty('--float-amp', `${amp}px`);
+	node.style.setProperty('--float-dur', `${dur}s`);
+	node.classList.add('float');
+	return {};
+}
+
 // animate a number from 0 to its value when it scrolls into view
 export function count_up(node: HTMLElement, opts: { to: number; dp?: number; dur?: number }) {
 	let { to, dp = 0, dur = 1100 } = opts;

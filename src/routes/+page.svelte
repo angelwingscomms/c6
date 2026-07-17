@@ -3,9 +3,16 @@
 	import Btn from '$lib/components/Btn.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import { reveal } from '$lib/actions';
+	import { reveal, parallax, float } from '$lib/actions';
 
 	let { data }: { data: { user: { name: string } | null } } = $props();
+
+	let progress = $state(0);
+	function on_scroll() {
+		const h = document.documentElement;
+		const max = h.scrollHeight - h.clientHeight;
+		progress = max > 0 ? h.scrollTop / max : 0;
+	}
 
 	const steps = [
 		{ n: '01', i: 'box', t: 'Log the order', d: 'Record what you ordered from each supplier — quantities, cost notes, the lot.' },
@@ -30,6 +37,11 @@
 
 <Nav user={data.user} />
 
+<div class="progress" style="transform: scaleX({progress})"></div>
+<div class="aura" aria-hidden="true"></div>
+
+<svelte:window on:scroll={on_scroll} />
+
 <section class="hero wrap">
 	<div class="hcopy" use:reveal>
 		<span class="eyebrow eyebrow-amber">Material & progress control · for site builders</span>
@@ -46,8 +58,8 @@
 		</div>
 	</div>
 
-	<div class="hviz" use:reveal={140}>
-		<div class="mock card">
+	<div class="hviz" use:reveal={140} use:parallax={0.05}>
+		<div class="mock card" use:float={{ amp: 9, dur: 8 }}>
 			<div class="mhead">
 				<span class="eyebrow">Marigold Terraces · Block B</span>
 				<span class="badge badge-bad">1 flag</span>
@@ -121,6 +133,27 @@
 </footer>
 
 <style>
+	.progress {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		transform-origin: 0 50%;
+		background: linear-gradient(90deg, var(--color-amber), color-mix(in oklab, var(--color-amber) 40%, #fff));
+		box-shadow: 0 0 12px color-mix(in oklab, var(--color-amber) 60%, transparent);
+		z-index: 60;
+		pointer-events: none;
+	}
+	.aura {
+		position: fixed;
+		inset: -20% -10% auto -10%;
+		height: 70vh;
+		background: radial-gradient(40% 60% at 70% 0%, rgba(245, 166, 35, 0.1), transparent 70%);
+		filter: blur(20px);
+		z-index: -1;
+		pointer-events: none;
+	}
 	.hero {
 		display: grid;
 		grid-template-columns: 1.05fr 0.95fr;
@@ -150,6 +183,8 @@
 	}
 	.hviz {
 		position: relative;
+		transform: translateY(var(--py, 0));
+		transition: transform 0.1s linear;
 	}
 	.mock {
 		padding: 1.3rem;
@@ -256,6 +291,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+		transition: transform 0.5s var(--ease-out), background 0.5s var(--ease-out);
+	}
+	.step:hover {
+		transform: translateY(-4px);
+		background: color-mix(in oklab, var(--color-panel) 60%, var(--color-base));
 	}
 	.snum {
 		color: var(--color-amber);
