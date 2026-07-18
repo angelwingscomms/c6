@@ -2,7 +2,7 @@
 	import type { MilestoneRow } from '$lib/types';
 	import { post, del } from '$lib/api';
 	import { toast } from '$lib/toast.svelte';
-	import { reveal } from '$lib/actions';
+	import { reveal, ctrlEnter } from '$lib/actions';
 	import Card from '$lib/components/Card.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import Btn from '$lib/components/Btn.svelte';
@@ -151,7 +151,7 @@
 
 <!-- add milestone modal -->
 <Modal bind:open title="Add milestone">
-	<div class="form">
+	<div class="form" use:ctrlEnter={submit}>
 		<Field label="Title" bind:value={n} placeholder="e.g. Foundation complete" />
 		<Field
 			label="Percent complete"

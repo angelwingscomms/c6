@@ -2,7 +2,7 @@
 	import type { Mat, Stock, Row } from '$lib/types';
 	import { post, del } from '$lib/api';
 	import { toast } from '$lib/toast.svelte';
-	import { reveal } from '$lib/actions';
+	import { reveal, ctrlEnter } from '$lib/actions';
 	import { page } from '$app/state';
 	import Card from '$lib/components/Card.svelte';
 	import Btn from '$lib/components/Btn.svelte';
@@ -293,7 +293,7 @@
 			<button class="sg" class:on={kind === k} onclick={() => (kind = k as 'o' | 'r' | 'g')}>{l}</button>
 		{/each}
 	</div>
-	<div class="form">
+	<div class="form" use:ctrlEnter={submit}>
 		<label class="lbl"><span class="eyebrow">Material</span>
 			<select class="field" bind:value={mat}>
 				{#each data.m as mm (mm.id)}<option value={mm.id}>{mm.n} ({mm.u})</option>{/each}
@@ -326,7 +326,7 @@
 
 <!-- add material modal -->
 <Modal bind:open={add_open} title="Add material">
-	<div class="form">
+	<div class="form" use:ctrlEnter={add_material_submit}>
 		<Field label="Name" bind:value={new_n} placeholder="e.g. Cement (Dangote 3X)" required />
 		<Field label="Unit" bind:value={new_u} options={UNIT_OPTIONS} />
 		<Field label="Category (optional)" bind:value={new_c} placeholder="e.g. Structural" />
@@ -338,7 +338,7 @@
 
 <!-- benchmark modal -->
 <Modal bind:open={bench_open} title="Set benchmark">
-	<div class="form">
+	<div class="form" use:ctrlEnter={save_benchmark}>
 		<Field label="Material" bind:value={bench_t} options={data.m.map((m) => ({ v: m.id, l: m.n }))} />
 		<Field label="Work unit (e.g. blocks laid)" bind:value={bench_w} placeholder="e.g. blocks laid" />
 		<Field label="Material per 1 unit of work" type="number" bind:value={bench_q} placeholder="e.g. 0.5" />

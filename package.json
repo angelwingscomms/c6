@@ -49,5 +49,13 @@
 		"@fontsource-variable/space-grotesk": "^5.2.10",
 		"@qdrant/js-client-rest": "^1.18.0",
 		"arctic": "^3.7.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@tailwindcss/oxide",
+			"workerd",
+			"sharp",
+			"esbuild"
+		]
 	}
 }

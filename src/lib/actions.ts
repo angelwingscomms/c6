@@ -49,6 +49,24 @@ export function float(node: HTMLElement, { amp = 10, dur = 7 }: { amp?: number; 
 	return {};
 }
 
+// submit a form on Ctrl/Cmd+Enter from any field inside the node.
+// Plain Enter is left to the browser (newline in textareas, nothing in inputs)
+// so the explicit Control+Enter stays the deliberate submit gesture.
+export function ctrlEnter(node: HTMLElement, handler: () => void) {
+	const on_key = (e: KeyboardEvent) => {
+		if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+			e.preventDefault();
+			handler();
+		}
+	};
+	node.addEventListener('keydown', on_key);
+	return {
+		destroy() {
+			node.removeEventListener('keydown', on_key);
+		}
+	};
+}
+
 // animate a number from 0 to its value when it scrolls into view
 export function count_up(node: HTMLElement, opts: { to: number; dp?: number; dur?: number }) {
 	let { to, dp = 0, dur = 1100 } = opts;

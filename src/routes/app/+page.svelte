@@ -3,7 +3,7 @@
 	import { post } from '$lib/api';
 	import { toast } from '$lib/toast.svelte';
 	import { goto } from '$app/navigation';
-	import { reveal } from '$lib/actions';
+	import { reveal, ctrlEnter } from '$lib/actions';
 	import Shell from '$lib/components/Shell.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import Btn from '$lib/components/Btn.svelte';
@@ -70,7 +70,7 @@
 </Shell>
 
 <Modal bind:open title="Join a site">
-	<div class="form">
+	<div class="form" use:ctrlEnter={join}>
 		<Field label="Invite code" bind:value={code} placeholder="e.g. 7Q3K9M" />
 		<Btn variant="amber" onclick={join} disabled={busy} class="w">
 			<Icon name="check" size={16} />{busy ? 'Joining…' : 'Join site'}

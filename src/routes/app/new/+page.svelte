@@ -2,7 +2,7 @@
 	import { post } from '$lib/api';
 	import { toast } from '$lib/toast.svelte';
 	import { goto } from '$app/navigation';
-	import { reveal } from '$lib/actions';
+	import { reveal, ctrlEnter } from '$lib/actions';
 	import Shell from '$lib/components/Shell.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import Btn from '$lib/components/Btn.svelte';
@@ -36,8 +36,8 @@
 		<Card class="panel" delay={80}>
 			<span class="eyebrow eyebrow-amber">New site</span>
 			<h1 class="serif h1">Start a site ledger</h1>
-			<div class="form">
-				<Field label="Site name" bind:value={n} placeholder="e.g. Lekki Phase 2 Duplex" required />
+		<div class="form" use:ctrlEnter={create}>
+			<Field label="Site name" bind:value={n} placeholder="e.g. Lekki Phase 2 Duplex" required />
 				<Field label="Location (optional)" bind:value={l} placeholder="e.g. Lekki, Lagos" />
 				<Btn variant="amber" onclick={create} disabled={busy} class="w">
 					<Icon name="check" size={16} />{busy ? 'Creating…' : 'Create site'}

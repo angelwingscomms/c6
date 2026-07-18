@@ -12,6 +12,7 @@ export type AppEnv = {
 	SECRET: SecretVal;
 	GOOGLE_ID: SecretVal;
 	GOOGLE_SECRET: SecretVal;
+	OAUTH_ORIGIN?: SecretVal;
 	R2: R2Bucket;
 };
 
@@ -25,6 +26,7 @@ export function platform_env(event: RequestEvent): AppEnv {
 		SECRET: pick('SECRET'),
 		GOOGLE_ID: pick('GOOGLE_ID'),
 		GOOGLE_SECRET: pick('GOOGLE_SECRET'),
+		OAUTH_ORIGIN: pick('OAUTH_ORIGIN'),
 		R2: p.R2 as R2Bucket
 	};
 }

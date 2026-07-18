@@ -2,7 +2,7 @@
 	import type { Mat, Stock, Flag, Recent } from '$lib/types';
 	import { post } from '$lib/api';
 	import { toast } from '$lib/toast.svelte';
-	import { reveal } from '$lib/actions';
+	import { reveal, ctrlEnter } from '$lib/actions';
 	import Card from '$lib/components/Card.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import Btn from '$lib/components/Btn.svelte';
@@ -222,7 +222,7 @@
 			<button class="sg" class:on={kind === k} onclick={() => (kind = k as 'o' | 'r' | 'g')}>{l}</button>
 		{/each}
 	</div>
-	<div class="form">
+	<div class="form" use:ctrlEnter={submit}>
 		<label class="lbl"><span class="eyebrow">Material</span>
 			<select class="field" bind:value={mat}>
 				{#each data.m as mm (mm.id)}<option value={mm.id}>{mm.n} ({mm.u})</option>{/each}
