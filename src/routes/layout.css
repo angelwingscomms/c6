@@ -45,16 +45,6 @@ body {
 	margin: 0;
 	min-height: 100dvh;
 	background-color: var(--color-base);
-	/* blueprint grid hint + soft amber horizon glow */
-	background-image:
-		radial-gradient(120% 80% at 50% -20%, rgba(245, 166, 35, 0.08), transparent 60%),
-		linear-gradient(var(--color-line) 1px, transparent 1px),
-		linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
-	background-size:
-		100% 100%,
-		64px 64px,
-		64px 64px;
-	background-attachment: fixed;
 	color: var(--color-ink);
 	font-family: var(--font-ui);
 	font-feature-settings: 'ss01', 'ss02';

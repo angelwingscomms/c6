@@ -167,3 +167,5 @@ https://svelte.dev/e/css_unused_selector
 7:56:48 PM [vite] (client) page reload .svelte-kit/generated/root.js
 7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
 7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte
+8:05:16 PM [vite] (client) hmr update /src/routes/layout.css
+8:05:16 PM [vite] (ssr) page reload src/routes/layout.css
