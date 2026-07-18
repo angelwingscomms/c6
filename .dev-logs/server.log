@@ -2,27 +2,168 @@
 > c6@0.0.1 dev /home/ed/i/c6
 > vite dev
 
-Port 5173 is in use, trying another one...
 
-  VITE v8.1.5  ready in 1827 ms
+  VITE v8.1.5  ready in 2431 ms
 
-  ➜  Local:   http://localhost:5174/
+  ➜  Local:   http://localhost:3600/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 Using secrets defined in .env
 Using secrets defined in .env
-*** Fatal uncaught kj::Exception: workerd/util/sqlite.c++:1671: failed: SENTRY_DO SQLite failed; NOSENTRY database is locked: SQLITE_BUSY
-stack: /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@33b9d48 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20109b9 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206e2bc /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206dc76 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202b09c /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202aaf2 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fe0a32 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20680bf /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206b415 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fb1339 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432855 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432d78 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543082e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543062e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98d17 /usr/lib/libc.so.6@2abfb /usr/lib/libc.so.6@2acb4 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98024
+*** Fatal uncaught kj::Exception: workerd/util/sqlite.c++:844: failed: SENTRY_DO SQLite failed; NOSENTRY database is locked: SQLITE_BUSY (extended: SQLITE_BUSY_RECOVERY)
+stack: /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@33af68b /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@2010925 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206e2bc /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206dc76 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202b09c /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202aaf2 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fe0a32 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20680bf /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206b415 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fb1339 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432855 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432d78 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543082e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543062e /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98d17 /usr/lib/libc.so.6@2abfb /usr/lib/libc.so.6@2acb4 /home/ed/i/c6/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260710.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98024
 
 [1;31m[404] GET /favicon.ico[0m
 
-[1;31m[500] GET /login/google[0m
+[1;31m[500] GET /google[0m
 Error: Secret "GOOGLE_ID" not found
     at get_secret (src/lib/server/qdrant.ts:7:54)
     at google_client (src/lib/server/oauth.ts:7:19)
-    at GET (src/routes/login/google/+server.ts:9:21)
-10:27:34 PM [vite] vite.config.ts changed, restarting server...
-10:27:34 PM [vite] server restarted.
-
-  ➜  Local:   http://localhost:3600/
-  ➜  Network: use --host to expose
+    at GET (src/routes/google/+server.ts:9:21)
+6:52:16 PM [vite] (client) hmr update /src/routes/layout.css
+6:52:16 PM [vite] (ssr) page reload src/lib/server/oauth.ts
+6:52:22 PM [vite] (client) hmr update /src/routes/layout.css
+6:52:22 PM [vite] (ssr) page reload src/lib/server/env.ts
+6:52:29 PM [vite] (client) hmr update /src/routes/layout.css
+6:52:29 PM [vite] (ssr) page reload src/lib/server/env.ts
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/4.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/12.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+6:53:34 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+6:53:34 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+6:53:34 PM [vite] (client) page reload .svelte-kit/generated/root.js
+6:53:34 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
+6:53:34 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte
+6:57:23 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+6:57:26 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:00:16 PM [vite] (client) hmr update /src/routes/layout.css, /src/routes/+page.svelte, /src/lib/components/Card.svelte, /src/routes/login/+page.svelte, /src/routes/app/+page.svelte, /src/routes/app/new/+page.svelte
+7:00:16 PM [vite] (ssr) page reload src/lib/actions.ts
+7:00:51 PM [vite] (client) hmr update /src/routes/app/new/+page.svelte, /src/routes/layout.css
+7:00:51 PM [vite] (ssr) page reload src/routes/app/new/+page.svelte
+7:00:52 PM [vite] (client) hmr update /src/routes/app/new/+page.svelte, /src/routes/layout.css
+7:00:52 PM [vite] (ssr) page reload src/routes/app/new/+page.svelte
+7:01:02 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:01:02 PM [vite] (client) hmr update /src/routes/app/+page.svelte, /src/routes/layout.css
+7:01:02 PM [vite] (ssr) page reload src/routes/app/+page.svelte
+7:01:02 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:01:04 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:01:04 PM [vite] (client) hmr update /src/routes/app/+page.svelte, /src/routes/layout.css
+7:01:04 PM [vite] (ssr) page reload src/routes/app/+page.svelte
+7:01:04 PM [vite-plugin-svelte] src/routes/app/+page.svelte:99:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:01:26 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:26 PM [vite] (ssr) page reload src/routes/app/[id]/+page.svelte
+7:01:27 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:27 PM [vite] (ssr) page reload src/routes/app/[id]/+page.svelte
+7:01:39 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:39 PM [vite] (ssr) page reload src/routes/app/[id]/ledger/+page.svelte
+7:01:39 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:39 PM [vite] (ssr) page reload src/routes/app/[id]/ledger/+page.svelte
+7:01:40 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:40 PM [vite] (ssr) page reload src/routes/app/[id]/ledger/+page.svelte
+7:01:40 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:40 PM [vite] (ssr) page reload src/routes/app/[id]/ledger/+page.svelte
+7:01:55 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:55 PM [vite] (ssr) page reload src/routes/app/[id]/progress/+page.svelte
+7:01:55 PM [vite] (client) hmr update /src/routes/layout.css
+7:01:55 PM [vite] (ssr) page reload src/routes/app/[id]/progress/+page.svelte
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/4.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/5.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/11.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/12.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+7:02:55 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+7:02:55 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+7:02:55 PM [vite] (client) page reload .svelte-kit/generated/root.js
+7:02:55 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
+7:02:55 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte
+7:13:14 PM [vite-plugin-svelte] src/routes/app/[id]/drawings/+page.svelte:143:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:13:17 PM [vite-plugin-svelte] src/routes/app/[id]/progress/+page.svelte:201:1 Unused CSS selector ".mt"
+https://svelte.dev/e/css_unused_selector
+7:13:17 PM [vite-plugin-svelte] src/routes/app/[id]/progress/+page.svelte:204:1 Unused CSS selector ".overall"
+https://svelte.dev/e/css_unused_selector
+7:13:17 PM [vite-plugin-svelte] src/routes/app/[id]/progress/+page.svelte:210:1 Unused CSS selector ".overall :global(.stat)"
+https://svelte.dev/e/css_unused_selector
+7:37:05 PM [vite] (client) hmr update /src/routes/layout.css
+7:37:05 PM [vite] (ssr) page reload src/lib/server/env.ts
+7:37:48 PM [vite] (client) hmr update /src/routes/layout.css
+7:37:48 PM [vite] (ssr) page reload src/lib/server/env.ts
+7:37:56 PM [vite] (client) hmr update /src/routes/layout.css
+7:37:56 PM [vite] (ssr) page reload src/lib/server/oauth.ts
+7:56:17 PM [vite] (client) hmr update /src/routes/layout.css
+7:56:17 PM [vite] (ssr) page reload src/lib/components/Shell.svelte
+7:56:24 PM [vite] (client) hmr update /src/lib/components/Shell.svelte, /src/routes/layout.css
+7:56:24 PM [vite] (ssr) page reload src/lib/components/Shell.svelte
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/3.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/4.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/5.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/7.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/8.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/9.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/10.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/11.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/12.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+7:56:40 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+7:56:40 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+7:56:40 PM [vite] (client) page reload .svelte-kit/generated/root.js
+7:56:40 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
+7:56:40 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/3.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/4.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/5.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/7.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/8.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/9.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/10.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/11.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/12.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+7:56:44 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+7:56:44 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+7:56:44 PM [vite] (client) page reload .svelte-kit/generated/root.js
+7:56:44 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
+7:56:44 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/3.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/4.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/5.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/7.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/8.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/9.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/10.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/11.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/12.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+7:56:48 PM [vite] (client) page reload .svelte-kit/generated/root.js
+7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/root.js
+7:56:48 PM [vite] (ssr) page reload .svelte-kit/generated/root.svelte

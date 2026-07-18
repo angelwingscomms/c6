@@ -8,7 +8,7 @@
 		project = null,
 		children
 	}: {
-		user: { name: string; picture?: string };
+		user: { name: string; picture?: string; email?: string };
 		project?: { id: string; n: string } | null;
 		children: Snippet;
 	} = $props();
@@ -26,7 +26,7 @@
 	);
 	const path = $derived(page.url.pathname);
 	const active = (t: { h: string; exact: boolean }) => (t.exact ? path === t.h : path.startsWith(t.h));
-	const initial = $derived((user.name || '?').trim().charAt(0).toUpperCase());
+	const initial = $derived((user.email && user.email.trim().charAt(0).toLowerCase()) || '?');
 </script>
 
 <header class="top">
