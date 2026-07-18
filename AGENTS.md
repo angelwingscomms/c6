@@ -43,7 +43,8 @@ Access rule: every entity read/write checks the acting user is in project `a` (o
 
 ## API surface (all JSON keys single-letter)
 
-- `GET /google` → OAuth start · `GET /google/callback` → callback · `POST /logout`
+- `GET /google` → OAuth start (no `?code`) / callback (with `?code`) · `POST /logout`
+- Google auth callback URLs always `/google` — never `/google/callback` or any other path.
 - `POST /api/project` `{n,l}` → `{i}` · `GET /api/project` → my sites
 - `GET /api/project/[id]` → `{p, m[], s{mat:stock}, f[] flags, r[] recent}`
 - `POST /api/join` `{c}` → join by invite code
